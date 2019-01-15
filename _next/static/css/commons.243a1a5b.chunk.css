@@ -1,0 +1,39 @@
+@keyframes Spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes Background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: sans-serif;
+  overflow: hidden;
+  background-color: black;
+}
+
+body {
+  position: fixed;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, .5);
+  border-radius: 5px;
+}
+
+
+/*# sourceMappingURL=commons.243a1a5b.chunk.css.map*/
