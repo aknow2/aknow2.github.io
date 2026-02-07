@@ -2,6 +2,21 @@
   "version": "1.0",
   "items": [
     {
+      "id": "web-based-audio-sequencer",
+      "title": "Web based audio sequencer",
+      "description": "Audio sequencer using webaudio API and image recognition",
+      "links": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/p/DTfxXv4EoHL/",
+          "icon": "instagram"
+        }
+      ],
+      "previewImageUrl": "/cards/web-based-audio-sequencer.jpg",
+      "previewImageWebp": "/cards/web-based-audio-sequencer.webp",
+      "previewAlt": "Web based audio sequencer preview"
+    },
+    {
       "id": "360-lithophane",
       "title": "360 lithophane",
       "description": "",
@@ -20,21 +35,6 @@
       "previewImageUrl": "/cards/360-lithophane.jpg",
       "previewImageWebp": "/cards/360-lithophane.webp",
       "previewAlt": "360 lithophane preview"
-    },
-    {
-      "id": "web-based-audio-sequencer",
-      "title": "Web based audio sequencer",
-      "description": "Audio sequencer using webaudio API and image recognition",
-      "links": [
-        {
-          "label": "Instagram",
-          "url": "https://www.instagram.com/p/DTfxXv4EoHL/",
-          "icon": "instagram"
-        }
-      ],
-      "previewImageUrl": "/cards/web-based-audio-sequencer.jpg",
-      "previewImageWebp": "/cards/web-based-audio-sequencer.webp",
-      "previewAlt": "Web based audio sequencer preview"
     },
     {
       "id": "phenakistoscope-art-project",
