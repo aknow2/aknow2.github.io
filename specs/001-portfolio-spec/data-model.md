@@ -21,6 +21,7 @@
   - `description` (string, required): Short summary (English UI).
   - `links` (array of Release Link, required): External destinations for the card.
   - `previewImageUrl` (string, optional): Image URL for card previews.
+  - `previewImageWebp` (string, optional): WebP image URL for card previews.
   - `previewAlt` (string, optional): Alt text for preview image.
 - **Validation**:
   - Each `links[].url` must be a valid absolute URL.

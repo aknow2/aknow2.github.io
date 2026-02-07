@@ -17,6 +17,7 @@ export type ReleaseItem = {
 	description: string;
 	links: ReleaseLink[];
 	previewImageUrl?: string;
+	previewImageWebp?: string;
 	previewAlt?: string;
 };
 

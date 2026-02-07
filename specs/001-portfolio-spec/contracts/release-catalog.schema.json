@@ -34,6 +34,7 @@
             }
           },
           "previewImageUrl": { "type": "string", "format": "uri" },
+          "previewImageWebp": { "type": "string", "format": "uri" },
           "previewAlt": { "type": "string" }
         }
       }

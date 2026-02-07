@@ -83,14 +83,28 @@ const main = async () => {
 		const links = await collectLinks(rl);
 
 		const slug = toSlug(title || "item");
-		const outputName = `${slug}.jpg`;
-		const outputPath = path.join(CARDS_DIR, outputName);
+		const outputNameJpg = `${slug}.jpg`;
+		const outputNameWebp = `${slug}.webp`;
+		const outputPathJpg = path.join(CARDS_DIR, outputNameJpg);
+		const outputPathWebp = path.join(CARDS_DIR, outputNameWebp);
 
 		await mkdir(CARDS_DIR, { recursive: true });
-		await sharp(imagePath)
-			.resize({ width: 1200, height: 800, fit: "inside", withoutEnlargement: true })
+		const pipeline = sharp(imagePath).resize({
+			width: 1200,
+			height: 800,
+			fit: "inside",
+			withoutEnlargement: true,
+		});
+
+		await pipeline
+			.clone()
 			.jpeg({ quality: 82 })
-			.toFile(outputPath);
+			.toFile(outputPathJpg);
+
+		await pipeline
+			.clone()
+			.webp({ quality: 82 })
+			.toFile(outputPathWebp);
 
 		const rawCatalog = await readFile(CATALOG_PATH, "utf-8");
 		const catalog = JSON.parse(rawCatalog);
@@ -100,7 +114,8 @@ const main = async () => {
 			title,
 			description,
 			links,
-			previewImageUrl: toUrlPath(outputName),
+			previewImageUrl: toUrlPath(outputNameJpg),
+			previewImageWebp: toUrlPath(outputNameWebp),
 			previewAlt: `${title} preview`,
 		};
 
@@ -109,7 +124,8 @@ const main = async () => {
 		await writeFile(CATALOG_PATH, JSON.stringify(catalog, null, 2) + "\n");
 
 		output.write("\nAdded item to release-catalog.json and saved resized image.\n");
-		output.write(`Image: ${toUrlPath(outputName)}\n`);
+		output.write(`Image (jpg): ${toUrlPath(outputNameJpg)}\n`);
+		output.write(`Image (webp): ${toUrlPath(outputNameWebp)}\n`);
 	} finally {
 		rl.close();
 	}

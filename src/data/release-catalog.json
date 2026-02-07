@@ -2,6 +2,26 @@
   "version": "1.0",
   "items": [
     {
+      "id": "360-lithophane",
+      "title": "360 lithophane",
+      "description": "",
+      "links": [
+        {
+          "label": "instagram",
+          "url": "https://www.instagram.com/p/DSg0GNikipI/",
+          "icon": "instagram"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/aknow2/360li",
+          "icon": "github"
+        }
+      ],
+      "previewImageUrl": "/cards/360-lithophane.jpg",
+      "previewImageWebp": "/cards/360-lithophane.webp",
+      "previewAlt": "360 lithophane preview"
+    },
+    {
       "id": "web-based-audio-sequencer",
       "title": "Web based audio sequencer",
       "description": "Audio sequencer using webaudio API and image recognition",
@@ -13,6 +33,7 @@
         }
       ],
       "previewImageUrl": "/cards/web-based-audio-sequencer.jpg",
+      "previewImageWebp": "/cards/web-based-audio-sequencer.webp",
       "previewAlt": "Web based audio sequencer preview"
     },
     {
@@ -27,6 +48,7 @@
         }
       ],
       "previewImageUrl": "/cards/phenakistoscope-art-project.jpg",
+      "previewImageWebp": "/cards/phenakistoscope-art-project.webp",
       "previewAlt": "Phenakistoscope art project preview"
     },
     {
@@ -41,6 +63,7 @@
         }
       ],
       "previewImageUrl": "/cards/infinity-mirror-didgeridoo.jpg",
+      "previewImageWebp": "/cards/infinity-mirror-didgeridoo.webp",
       "previewAlt": "Infinity Mirror didgeridoo preview"
     },
     {
@@ -60,6 +83,7 @@
         }
       ],
       "previewImageUrl": "/cards/geoprint.jpg",
+      "previewImageWebp": "/cards/geoprint.webp",
       "previewAlt": "GeoPrint preview"
     }
   ]
