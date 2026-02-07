@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/release-catalog.schema.json",
+  "title": "Release Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "description", "links"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 },
+          "links": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["label", "url", "icon"],
+              "properties": {
+                "label": { "type": "string", "minLength": 1 },
+                "url": { "type": "string", "format": "uri" },
+                "icon": { "type": "string", "minLength": 1 }
+              }
+            }
+          },
+          "previewImageUrl": { "type": "string", "format": "uri" },
+          "previewAlt": { "type": "string" }
+        }
+      }
+    }
+  },
+  "required": ["items"]
+}

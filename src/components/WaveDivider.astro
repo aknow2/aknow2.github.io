@@ -1,0 +1,48 @@
+<div class="wave" aria-hidden="true">
+	<svg viewBox="0 0 600 24" preserveAspectRatio="none" role="img">
+		<g class="wave__track">
+			<path
+				id="wave-path"
+				d="M0 12 C 50 30, 100 -6, 150 12 C 200 30, 250 -6, 300 12 C 350 30, 400 -6, 450 12 C 500 30, 550 -6, 600 12"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="3"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			/>
+			<use href="#wave-path" x="600" />
+			<animateTransform
+				class="wave__motion"
+				attributeName="transform"
+				type="translate"
+				dur="180s"
+				repeatCount="indefinite"
+				values="0 0; -600 0"
+			/>
+		</g>
+	</svg>
+</div>
+
+<style>
+	.wave {
+		color: #0f172a;
+		margin: 8px auto 24px;
+		width: min(520px, 90%);
+	}
+
+	.wave svg {
+		display: block;
+		width: 100%;
+		height: 24px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.wave svg {
+			animation: none;
+		}
+
+		.wave__motion {
+			display: none;
+		}
+	}
+</style>
