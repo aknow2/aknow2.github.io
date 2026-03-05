@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import WaveDivider from "../components/WaveDivider.astro";
+import ReleaseGrid from "../components/ReleaseGrid.astro";
+---
+
+<Layout>
+	<Hero />
+	<SocialLinks />
+	<section class="section" aria-labelledby="outputs-title">
+		<h2 id="outputs-title" class="section__title">Mostly Harmless Outputs</h2>
+		<ReleaseGrid />
+	</section>
+</Layout>
+
+<style>
+	.section {
+		margin-top: 56px;
+	}
+
+	.section__title {
+		text-align: center;
+		margin: 0 0 16px 0;
+		font-size: clamp(1.6rem, 3vw, 2rem);
+		letter-spacing: 0.02em;
+	}
+</style>

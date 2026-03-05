@@ -1,0 +1,54 @@
+---
+import { getReleaseItems } from "../data/catalog";
+import type { ReleaseLink } from "../data/types";
+import OgpCard from "./Card/OgpCard.astro";
+import githubIconUrl from "../assets/github_w.svg?url";
+import xIconUrl from "../assets/x.svg?url";
+import instagramIconUrl from "../assets/instagram.svg?url";
+
+const items = getReleaseItems();
+const linkIconMap: Record<ReleaseLink["icon"], string> = {
+	github: githubIconUrl,
+	x: xIconUrl,
+	instagram: instagramIconUrl,
+};
+---
+
+<div class="release-grid">
+	{items.map((item) => {
+		const links = (item.links || []).map((link) => ({
+			...link,
+			iconUrl: linkIconMap[link.icon],
+		}));
+		return (
+			<OgpCard
+				title={item.title}
+				description={item.description}
+				previewImageUrl={item.previewImageUrl}
+				previewImageWebp={item.previewImageWebp}
+				previewAlt={item.previewAlt}
+				links={links}
+			/>
+		);
+	})}
+</div>
+
+<style>
+	.release-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 24px;
+	}
+
+	@media (max-width: 900px) {
+		.release-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 640px) {
+		.release-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

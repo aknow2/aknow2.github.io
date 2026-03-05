@@ -1,0 +1,17 @@
+---
+import BaseCard from "./BaseCard.astro";
+
+const { title, description, previewImageUrl, previewImageWebp, previewAlt, links } = Astro.props;
+const imageUrl = previewImageUrl || "/placeholder.svg";
+const imageWebpUrl = previewImageWebp || undefined;
+const altText = previewAlt || `${title} preview`;
+---
+
+<BaseCard
+	title={title}
+	description={description}
+	imageUrl={imageUrl}
+	imageWebpUrl={imageWebpUrl}
+	imageAlt={altText}
+	links={links}
+/>

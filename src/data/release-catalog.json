@@ -1,0 +1,90 @@
+{
+  "version": "1.0",
+  "items": [
+    {
+      "id": "web-based-audio-sequencer",
+      "title": "Web based audio sequencer",
+      "description": "Audio sequencer using webaudio API and image recognition",
+      "links": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/p/DTfxXv4EoHL/",
+          "icon": "instagram"
+        }
+      ],
+      "previewImageUrl": "/cards/web-based-audio-sequencer.jpg",
+      "previewImageWebp": "/cards/web-based-audio-sequencer.webp",
+      "previewAlt": "Web based audio sequencer preview"
+    },
+    {
+      "id": "360-lithophane",
+      "title": "360 lithophane",
+      "description": "",
+      "links": [
+        {
+          "label": "instagram",
+          "url": "https://www.instagram.com/p/DSg0GNikipI/",
+          "icon": "instagram"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/aknow2/360li",
+          "icon": "github"
+        }
+      ],
+      "previewImageUrl": "/cards/360-lithophane.jpg",
+      "previewImageWebp": "/cards/360-lithophane.webp",
+      "previewAlt": "360 lithophane preview"
+    },
+    {
+      "id": "phenakistoscope-art-project",
+      "title": "Phenakistoscope art project",
+      "description": "Burning japan 2025, Ise geek faire 2025",
+      "links": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/p/DRrae4Hkv7T/",
+          "icon": "instagram"
+        }
+      ],
+      "previewImageUrl": "/cards/phenakistoscope-art-project.jpg",
+      "previewImageWebp": "/cards/phenakistoscope-art-project.webp",
+      "previewAlt": "Phenakistoscope art project preview"
+    },
+    {
+      "id": "infinity-mirror-didgeridoo",
+      "title": "Infinity Mirror didgeridoo",
+      "description": "3D pritinng travel didgeridoo for burningman 2025",
+      "links": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/p/DS5JF4sEm6L/",
+          "icon": "instagram"
+        }
+      ],
+      "previewImageUrl": "/cards/infinity-mirror-didgeridoo.jpg",
+      "previewImageWebp": "/cards/infinity-mirror-didgeridoo.webp",
+      "previewAlt": "Infinity Mirror didgeridoo preview"
+    },
+    {
+      "id": "geoprint",
+      "title": "GeoPrint",
+      "description": "select a geographical area on a map, generate a 3D terraced terrain model, and export it as an STL file for 3D printing.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/aknow2/geoprint",
+          "icon": "github"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/p/DRjczZZEpP_/",
+          "icon": "instagram"
+        }
+      ],
+      "previewImageUrl": "/cards/geoprint.jpg",
+      "previewImageWebp": "/cards/geoprint.webp",
+      "previewAlt": "GeoPrint preview"
+    }
+  ]
+}

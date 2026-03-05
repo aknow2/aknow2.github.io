@@ -1,0 +1,84 @@
+---
+import { getSocialLinks } from "../data/catalog";
+import githubIconUrl from "../assets/github_w.svg?url";
+import xIconUrl from "../assets/x.svg?url";
+import instagramIconUrl from "../assets/instagram.svg?url";
+
+const links = getSocialLinks();
+const iconMap: Record<string, string> = {
+	github: githubIconUrl,
+	x: xIconUrl,
+	instagram: instagramIconUrl,
+};
+---
+
+<nav class="social" aria-label="Social links">
+	<ul class="social__list">
+		{links.map((link) => (
+			<li class="social__item">
+				<a
+					class="social__link"
+					href={link.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label={link.label}
+					data-platform={link.icon}
+				>
+					<span class="social__icon" data-platform={link.icon} aria-hidden="true">
+						<img src={iconMap[link.icon]} alt="" aria-hidden="true" />
+					</span>
+					<span class="social__label">{link.label}</span>
+				</a>
+			</li>
+		))}
+	</ul>
+</nav>
+
+<style>
+	.social {
+		display: flex;
+		justify-content: center;
+	}
+
+	.social__list {
+		display: flex;
+		gap: 16px;
+		list-style: none;
+		padding: 0;
+		margin: 12px 0 0;
+		flex-wrap: wrap;
+	}
+
+	.social__link {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		padding: 10px 14px;
+		border-radius: 999px;
+		background-image: linear-gradient(90deg, #111827 90%, #6b6b6b 100% );
+		box-shadow: 0 2px 8px rgba(15, 23, 42, 0.28);
+		font-weight: 600;
+		color: #f8fafc;
+		transition: box-shadow 0.15s ease;
+	}
+
+	.social__link:hover {
+		box-shadow: 0 4px 12px rgba(15, 23, 42, 0.34);
+	}
+
+	.social__icon {
+		display: inline-flex;
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		background: transparent;
+	}
+
+	.social__icon img {
+		width: 20px;
+		height: 20px;
+		filter: grayscale(1) brightness(1.25) contrast(1.05);
+	}
+</style>
