@@ -10,7 +10,7 @@
     "add:release": "node scripts/add-release-item.mjs"
   },
   "dependencies": {
-    "astro": "^5.17.1",
+    "astro": "^5.18.1",
     "sharp": "^0.33.5"
   }
 }
