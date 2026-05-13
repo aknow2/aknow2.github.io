@@ -2,6 +2,21 @@
   "version": "1.0",
   "items": [
     {
+      "id": "zoatlamp",
+      "title": "Zoatlamp",
+      "description": "A strobe lampshade that animates patterns.",
+      "links": [
+        {
+          "label": "instagram",
+          "url": "https://www.instagram.com/reels/DXTj_Kskugl/",
+          "icon": "instagram"
+        }
+      ],
+      "previewImageUrl": "/cards/zoatlamp.jpg",
+      "previewImageWebp": "/cards/zoatlamp.webp",
+      "previewAlt": "Zoatlamp preview"
+    },
+    {
       "id": "web-based-audio-sequencer",
       "title": "Web based audio sequencer",
       "description": "Audio sequencer using webaudio API and image recognition",
